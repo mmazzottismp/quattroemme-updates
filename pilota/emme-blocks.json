@@ -1,0 +1,10 @@
+{
+	"slug": "emme-blocks",
+	"version": "0.1.0",
+	"url": "https://github.com/mmazzottismp/quattroemme",
+	"package": "https://mmazzottismp.github.io/quattroemme-updates/zip/emme-blocks-0.1.0.zip",
+	"requires": "6.6",
+	"tested": "7.1",
+	"requires_php": "8.1",
+	"last_updated": "2026-11-03"
+}
