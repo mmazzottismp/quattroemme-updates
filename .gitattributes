@@ -1,0 +1,6 @@
+# Fine riga LF nel repository, sempre: il sito che li serve gira su Linux e
+# una conversione a CRLF farebbe crescere i file senza nessun motivo.
+* text=auto eol=lf
+
+# I pacchetti sono binari: non si toccano.
+*.zip binary
