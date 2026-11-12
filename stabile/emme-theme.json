@@ -1,10 +1,10 @@
 {
 	"theme": "emme-theme",
-	"version": "0.5.0",
+	"version": "0.7.0",
 	"url": "https://github.com/mmazzottismp/quattroemme",
-	"package": "https://mmazzottismp.github.io/quattroemme-updates/zip/emme-theme-0.5.0.zip",
+	"package": "https://mmazzottismp.github.io/quattroemme-updates/zip/emme-theme-0.7.0.zip",
 	"requires": "6.6",
 	"tested": "7.1",
 	"requires_php": "8.1",
-	"last_updated": "2026-11-09"
+	"last_updated": "2026-11-12"
 }
