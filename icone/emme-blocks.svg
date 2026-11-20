@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="quattroemme Blocks">
+	<!--
+		L'ICONA DEL PLUGIN, con lo sfondo che si muove.
+
+		Dove si vede: Bacheca → Aggiornamenti, accanto al nome del plugin, e
+		nella scheda «Visualizza dettagli». WordPress la disegna dentro a un
+		`<img>`, e dentro a un `<img>` un SVG **si anima** - le animazioni
+		CSS e SMIL funzionano, il JavaScript no. Per questo l'animazione e'
+		scritta in CSS qui dentro e non serve nient'altro.
+
+		I COLORI sono quelli veri del rendering, campionati dal file di
+		Manuel: il verde del 4 sta fra #6c8448 e #c0cc9c, l'oro della M fra
+		#905400 e #fcf0b4. Il fondo e' il verde del tema (#2f3d33), cosi'
+		l'icona appartiene al prodotto e non solo al marchio.
+
+		L'ANIMAZIONE E' LENTA E PICCOLA di proposito: un bagliore che
+		attraversa in nove secondi. Un'icona che lampeggia in una pagina di
+		servizio e' un fastidio, non un vezzo. E chi ha chiesto al sistema di
+		ridurre le animazioni non vede niente muoversi.
+	-->
+	<defs>
+		<linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+			<stop offset="0" stop-color="#3c4f41" />
+			<stop offset="1" stop-color="#232e26" />
+		</linearGradient>
+
+		<linearGradient id="verde" x1="0" y1="0" x2="0.4" y2="1">
+			<stop offset="0" stop-color="#c3d3a3" />
+			<stop offset="1" stop-color="#6c8448" />
+		</linearGradient>
+
+		<linearGradient id="oro" x1="0.1" y1="0" x2="0.7" y2="1">
+			<stop offset="0" stop-color="#fbe9a8" />
+			<stop offset="0.45" stop-color="#e4a830" />
+			<stop offset="1" stop-color="#9c5d05" />
+		</linearGradient>
+
+		<linearGradient id="bagliore" x1="0" y1="0" x2="1" y2="0">
+			<stop offset="0" stop-color="#f3d06a" stop-opacity="0" />
+			<stop offset="0.5" stop-color="#f3d06a" stop-opacity="0.5" />
+			<stop offset="1" stop-color="#f3d06a" stop-opacity="0" />
+		</linearGradient>
+
+		<clipPath id="dentro">
+			<rect width="128" height="128" rx="26" />
+		</clipPath>
+	</defs>
+
+	<style>
+		.bagliore {
+			animation: passa 9s linear infinite;
+		}
+
+		@keyframes passa {
+			0%   { transform: translateX(-190px); }
+			55%  { transform: translateX(190px); }
+			100% { transform: translateX(190px); }
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			.bagliore { animation: none; opacity: .18; }
+		}
+	</style>
+
+	<g clip-path="url(#dentro)">
+		<rect width="128" height="128" fill="url(#fondo)" />
+
+		<!-- la striscia di luce, inclinata, che attraversa il fondo -->
+		<rect class="bagliore" x="-60" y="-30" width="56" height="190" fill="url(#bagliore)" transform-origin="64 64" style="rotate: 18deg" />
+
+		<!--
+			Il 4M, le stesse proporzioni della versione piatta: a questa
+			misura i volumi del rendering si impastano, i due colori no.
+		-->
+		<g fill="none" stroke-width="17" stroke-linecap="butt" stroke-linejoin="miter" transform="translate(1 0)">
+			<path d="M48 24 L14 72 H60" stroke="url(#verde)" />
+			<path d="M48 24 V102" stroke="url(#verde)" />
+			<path d="M75 102 V30 L96 61 L117 30 V102" stroke="url(#oro)" />
+		</g>
+	</g>
+</svg>
