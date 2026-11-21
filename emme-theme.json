@@ -1,8 +1,8 @@
 {
 	"theme": "emme-theme",
-	"version": "0.8.4",
+	"version": "0.8.5",
 	"url": "https://github.com/mmazzottismp/quattroemme",
-	"package": "https://mmazzottismp.github.io/quattroemme-updates/zip/emme-theme-0.8.4.zip",
+	"package": "https://mmazzottismp.github.io/quattroemme-updates/zip/emme-theme-0.8.5.zip",
 	"requires": "6.6",
 	"tested": "7.1",
 	"requires_php": "8.1",
